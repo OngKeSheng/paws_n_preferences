@@ -14,6 +14,6 @@ Swipe right if you like a cat, swipe left if you don't. At the end, you'll see a
 
 ## Running it locally
 
-Just click `https://ongkesheng.github.io/paws_n_preferences/` in your browser. That's it.
+Just click [here](https://ongkesheng.github.io/paws_n_preferences/) in your browser. That's it.
 
 Done!
