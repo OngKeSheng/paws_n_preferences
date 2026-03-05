@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Preferences - Find Your Favourite Kitty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🐱 Paws & Preferences</h1>
+            <p class="subtitle">Find Your Favourite Kitty</p>
+        </header>
+
+        <!-- Main Card Stack -->
+        <div id="main-view" class="main-view">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            
+            <div class="counter">
+                <span id="current-count">0</span> / <span id="total-count">0</span>
+            </div>
+
+            <div class="card-container" id="card-container">
+                <div class="loading">Loading adorable cats... 🐾</div>
+            </div>
+
+            <!-- Swipe Indicators -->
+            <div class="swipe-indicator swipe-indicator-left" id="dislike-indicator">
+                <span class="icon">👎</span>
+                <span class="text">Nope</span>
+            </div>
+            <div class="swipe-indicator swipe-indicator-right" id="like-indicator">
+                <span class="icon">❤️</span>
+                <span class="text">Like</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-dislike" id="btn-dislike" aria-label="Dislike">
+                    <span class="btn-icon">✕</span>
+                </button>
+                <button class="btn btn-like" id="btn-like" aria-label="Like">
+                    <span class="btn-icon">❤</span>
+                </button>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <p>👈 Swipe left to dislike • Swipe right to like 👉</p>
+                <p class="instructions-small">or use the buttons below</p>
+            </div>
+        </div>
+
+        <!-- Results View -->
+        <div id="results-view" class="results-view hidden">
+            <h2>Your Preferences</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="liked-count">0</span>
+                    <span class="stat-label">Cats Liked</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="disliked-count">0</span>
+                    <span class="stat-label">Cats Passed</span>
+                </div>
+            </div>
+
+            <div class="results-content">
+                <h3>Your Favourite Kitties 💝</h3>
+                <div id="liked-cats-grid" class="liked-cats-grid">
+                    <!-- Liked cats will be inserted here -->
+                </div>
+                <div id="no-likes-message" class="no-likes-message hidden">
+                    <p>😿 You didn't like any cats!</p>
+                    <p>Maybe you're more of a dog person?</p>
+                </div>
+            </div>
+
+            <button class="btn btn-restart" id="btn-restart" aria-label="Play Again">
+                <span class="btn-icon">🔄</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
